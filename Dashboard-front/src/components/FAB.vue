@@ -1,11 +1,16 @@
 <template>
-<div class="fab-container">
-  <div class="fab-icon-holder">
-    <button class="fas fa-question btn btn-circle bg-neutral shadow-2xl p-8">
-      +
-    </button>
-  </div>
-</div>
+  <a>
+    <router-link to='/categories/add'>
+      <div class="fab-container">
+        <div class="fab-icon-holder">
+          <button class="fas fa-question btn btn-circle bg-neutral shadow-2xl p-8">
+            +
+          </button>
+        </div>
+      </div>
+    </router-link>
+  </a>
+
 </template>
 
 <script>

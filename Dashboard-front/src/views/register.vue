@@ -37,25 +37,9 @@ export default {
     },
     methods: {
         async onSubmit(form){
-
-
             await axios.post('http://127.0.0.1:8000/api/register', form).then(response =>{
                 console.log(response);
             });
-
-            // const res = await fetch("http://127.0.0.1:8000/api/register", {
-            // method: 'POST',
-            // credentials: "same-origin",
-            // }).then(res => res.json())
-            // .then(
-            //     (json) => {
-            //         this.form
-            //     }
-            // );
-
-            //         console.log(res);
-            //     }
-            // }
         }
     }
 }

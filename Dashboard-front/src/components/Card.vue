@@ -5,13 +5,23 @@
         <img src="https://picsum.photos/id/1005/300/200" class="rounded-lg shadow-lg">
       </figure>
       <div class="max-w-md card-body">
-        <h2 class="card-title">Glass</h2>
+        <h2 class="card-title">{{name}}</h2>
         <button v-if="showPrice" class="btn glass rounded-full">$ 55</button>
-
-        <p>Rerum reiciendis beatae tenetur excepturi aut pariatur est eos. Sit sit necessitatibus veritatis sed molestiae voluptates incidunt iure sapiente.</p>
+        <div class="form-control">
+          <label class="label">
+            <span class="label-text">Featured</span>
+            <input type="checkbox" disabled="disabled" :checked="featured" class="checkbox">
+          </label>
+        </div>
+        <div class="form-control">
+          <label class="label">
+            <span class="label-text">Active</span>
+            <input type="checkbox" disabled="disabled" :checked="active" class="checkbox">
+          </label>
+        </div>
         <div class="card-actions">
           <button v-if="showAction" class="btn btn-info p-2 rounded-full shadow-2xl">edit</button>
-          <button v-if="showAction" class="btn btn-error rounded-full">Delete</button>
+          <button v-if="showAction" @click="Delete(id)" class="btn btn-error rounded-full">Delete</button>
         </div>
       </div>
     </div>
@@ -22,9 +32,15 @@
 </template>
 
 <script>
+import axios from "axios";
+
 export default {
   name: "Card",
   props:{
+    'id': {
+      type: Number,
+      default: 0,
+    },
     'showAction': {
       type: Boolean,
       default: false,
@@ -33,10 +49,34 @@ export default {
       type: Boolean,
       default: false,
     },
+    'name': {
+      type: String,
+    },
+    'featured': {
+      type: Boolean,
+      default: false,
+
+    },
+    'active': {
+      type: Boolean,
+      default: false,
+    },
   },
   methods: {
+    async Delete(id){
 
-  },
+      await axios.delete('http://127.0.0.1:8000/api/Categories/'+id, {
+        headers: {
+          'Authorization' : 'Bearer ' + localStorage.getItem('token')
+        }
+      }).then(response =>{
+        console.log(response);
+        location.reload();
+
+      });
+    }
+  }
+
 }
 </script>
 

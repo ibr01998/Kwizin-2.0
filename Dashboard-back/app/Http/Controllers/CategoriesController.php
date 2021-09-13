@@ -26,8 +26,6 @@ class CategoriesController extends Controller
     {
         $request->validate([
             'title' => 'required',
-            'featured' => 'required',
-            'active' => 'required'
         ]);
 
         return Categories::create($request->all());
