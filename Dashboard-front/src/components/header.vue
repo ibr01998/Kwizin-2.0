@@ -2,9 +2,9 @@
 <div class="navbar m-4 shadow-lg bg-neutral-focus text-neutral-content rounded-box">
   <div class="px-2 mx-2 navbar-start">
     <span  class="text-lg font-bold">
-           <router-link to="/dashboard">Dashboard</router-link> 
+           <router-link to="/dashboard">Dashboard</router-link>
           </span>
-  </div> 
+    </div>
   <div class="hidden px-2 mx-2 navbar-center lg:flex">
     <div class="flex items-stretch">
       <a class="btn btn-ghost btn-sm rounded-btn">

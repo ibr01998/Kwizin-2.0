@@ -17,8 +17,8 @@ class CreateCategoriesTable extends Migration
             $table->id();
             $table->string('title');
             $table->string('image_name')->nullable();
-            $table->boolean('featured');
-            $table->boolean('active');
+            $table->boolean('featured')->default(false);
+            $table->boolean('active')->default(false);
             $table->timestamps();
         });
     }

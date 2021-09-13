@@ -25,12 +25,10 @@ Route::get('/Categories/search/{name}', [CategoriesController::class, 'search'])
 
 //for protected Routes(Private Routes)
 Route::group(['middleware' => ['auth:sanctum']], function (){
-    Route::post('/Categories', [CategoriesController::class, 'store']);
+    Route::post('/Categories/add', [CategoriesController::class, 'store']);
     Route::put('/Categories/{id}', [CategoriesController::class, 'update']);
     Route::delete('/Categories/{id}', [CategoriesController::class, 'destroy']);
     Route::post('/logout', [AuthController::class, 'logout']);
     Route::get('/user', [AuthController::class, 'index']);
-
-
 });
 

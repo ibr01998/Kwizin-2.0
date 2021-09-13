@@ -29,20 +29,21 @@
     </div>
   </div> 
 </div>
+  <div class="m-4 card bg-neutral ">
     <div class="m-4">
-      <div class="card bg-neutral-focus rounded-box place-items-center">
+      <div class="card bg-neutral-focus rounded-box place-items-center w-full">
         <div class=" m-4 text-2xl font-semibold">Most Popular Food's</div>
       </div>
     </div>
-    </div>
-  <div class="justify-center flex">
-    <Card class="m-4"></Card>
-    <Card class="m-4"></Card>
-    <Card class="m-4"></Card>
-    <Card class="m-4"></Card>
-
+  <div class="justify-center lg:flex md:flex">
+    <Card show-price class="m-4"></Card>
+    <Card show-price class="m-4"></Card>
+    <Card show-price class="m-4"></Card>
+    <Card show-price class="m-4"></Card>
+  </div>
   </div>
 
+</div>
 </template>
 
 <script>

@@ -14,7 +14,7 @@
         <input type="password" name="password_confirmation" v-model="form.password_confirmation" placeholder="Comfirm Password" class="input">
         </div>
         <div class="form-control">
-        <button type="submit" @click.prevent="onSubmit(form)" class="btn btn-primary">Register</button> 
+        <button type="submit" @click.prevent="onSubmit(form)" class="btn glass">Register</button>
         </div>
         </form>
     </div>
@@ -37,25 +37,9 @@ export default {
     },
     methods: {
         async onSubmit(form){
-
-
             await axios.post('http://127.0.0.1:8000/api/register', form).then(response =>{
                 console.log(response);
             });
-
-            // const res = await fetch("http://127.0.0.1:8000/api/register", {
-            // method: 'POST',
-            // credentials: "same-origin",
-            // }).then(res => res.json())
-            // .then(
-            //     (json) => {
-            //         this.form
-            //     }
-            // );
-
-            //         console.log(res);
-            //     }
-            // }
         }
     }
 }
