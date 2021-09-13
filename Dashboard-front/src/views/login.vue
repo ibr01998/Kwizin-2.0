@@ -10,7 +10,7 @@
         </div>
         <input type="hidden" name="_token" v-model="form._token">
         <div class="form-control">
-        <button type="submit" class="btn btn-primary">Login</button> 
+        <button type="submit" class="btn glass">Login</button>
         </div>
         </form>
     </div>

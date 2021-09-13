@@ -14,7 +14,7 @@
         <input type="password" name="password_confirmation" v-model="form.password_confirmation" placeholder="Comfirm Password" class="input">
         </div>
         <div class="form-control">
-        <button type="submit" @click.prevent="onSubmit(form)" class="btn btn-primary">Register</button> 
+        <button type="submit" @click.prevent="onSubmit(form)" class="btn glass">Register</button>
         </div>
         </form>
     </div>
