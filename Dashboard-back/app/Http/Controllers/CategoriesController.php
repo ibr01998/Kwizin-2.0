@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Http\Resources\CategoryResource;
 use App\Models\Categories;
 use Illuminate\Http\Request;
 
@@ -9,11 +10,12 @@ class CategoriesController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     *
      */
     public function index()
     {
-        return Categories::all();
+//        $Category = Categories::where('featured', false)->get();
+        return CategoryResource::collection(Categories::all());
     }
 
     /**
@@ -24,11 +26,19 @@ class CategoriesController extends Controller
      */
     public function store(Request $request)
     {
+
         $request->validate([
             'title' => 'required',
+            'image_name' => 'required|file|image'
         ]);
 
-        return Categories::create($request->all());
+        $categories = Categories::create($request->all());
+
+        if($request->hasFile('image_name') && $request->file('image_name')->isValid()){
+            $categories->addMediaFromRequest('image_name')->toMediaCollection('Category');
+        }
+
+        return $categories;
     }
 
     /**

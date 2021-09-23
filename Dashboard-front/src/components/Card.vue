@@ -2,7 +2,7 @@
   <div class="justify-center flex">
     <div class="lg:inline-block w-5/6 card bg-neutral-focus shadow-2xl text-neutral-content w-1/4">
       <figure class="">
-        <img src="https://picsum.photos/id/1005/300/200" class="rounded-lg shadow-lg">
+        <img v-bind:src="image" class="rounded-lg shadow-lg h-52">
       </figure>
       <div class="max-w-md card-body">
         <h2 class="card-title">{{name}}</h2>
@@ -26,9 +26,6 @@
       </div>
     </div>
   </div>
-
-
-
 </template>
 
 <script>
@@ -50,6 +47,9 @@ export default {
       default: false,
     },
     'name': {
+      type: String,
+    },
+    'image': {
       type: String,
     },
     'featured': {

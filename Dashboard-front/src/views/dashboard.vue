@@ -36,10 +36,10 @@
       </div>
     </div>
   <div class="justify-center lg:flex md:flex">
-    <Card show-price class="m-4"></Card>
-    <Card show-price class="m-4"></Card>
-    <Card show-price class="m-4"></Card>
-    <Card show-price class="m-4"></Card>
+    <Card show-price class="m-2"></Card>
+    <Card show-price class="m-2"></Card>
+    <Card show-price class="m-2"></Card>
+    <Card show-price class="m-2"></Card>
   </div>
   </div>
 

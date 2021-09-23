@@ -2,7 +2,7 @@
     <div class="m-20 p-6 card bg-base-200 ">
         <form>
         <div class="form-control pb-6">
-        <input type="text" name="name" v-model="form.name" placeholder="Name" class="input">
+        <input type="text" name="name" v-model="form.name" placeholder="Username" class="input">
         </div>
         <div class="form-control pb-6">
         <input type="email" name="email" v-model="form.email" placeholder="E-mail" class="input">

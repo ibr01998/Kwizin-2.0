@@ -6,7 +6,6 @@ import Login from '../views/login.vue';
 import Dashboard from '../views/dashboard.vue';
 import Categories from '../views/categories/categories.vue';
 import AddCategories from '../views/categories/addCategories.vue';
-
 import Foods from '../views/foods.vue';
 
 const routes = [
