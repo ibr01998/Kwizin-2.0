@@ -36,10 +36,17 @@
       </div>
     </div>
   <div class="justify-center lg:flex md:flex">
+<<<<<<< Updated upstream
     <Card show-price class="m-2"></Card>
     <Card show-price class="m-2"></Card>
     <Card show-price class="m-2"></Card>
     <Card show-price class="m-2"></Card>
+=======
+    <Card  class="m-4"></Card>
+    <Card show-price class="m-4"></Card>
+    <Card show-price class="m-4"></Card>
+    <Card show-price class="m-4"></Card>
+>>>>>>> Stashed changes
   </div>
   </div>
 
