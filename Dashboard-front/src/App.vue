@@ -1,6 +1,7 @@
 <template>
   <Header/>
-  <router-view></router-view>
+  <router-view>
+  </router-view>
   <Footer/>
 </template>
 
@@ -41,6 +42,13 @@ export default{
 ::-webkit-scrollbar-thumb:hover {
   background: #2a2e37;
 }
+.fade-enter-from,.fade-leave-to {
+  opacity: 0;
+}
 
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s ease-out;
+}
 
 </style>

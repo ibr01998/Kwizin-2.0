@@ -7,6 +7,7 @@ import Dashboard from '../views/dashboard.vue';
 import Categories from '../views/categories/categories.vue';
 import AddCategories from '../views/categories/addCategories.vue';
 import Foods from '../views/foods.vue';
+import EditCategories from '../views/categories/editCategories.vue';
 
 const routes = [
     {
@@ -48,6 +49,15 @@ const routes = [
         path: '/categories/add',
         name: 'AddCategorie',
         component: AddCategories,
+    },
+    {
+        path: '/categories/edit/:id',
+        name: 'EditCategorie',
+        component: EditCategories,
+        props: (route) => {
+            const id = Number.parseInt(route.params.id);
+            return { id }
+        },
     },
 ]
 

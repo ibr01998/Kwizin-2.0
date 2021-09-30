@@ -1,8 +1,8 @@
 <template>
   <div class="m-4 sm:justify-center wrapper page-loader">
     <div v-for="categorie in categories" :key="categorie.id">
-      <card show-action v-bind:name="categorie.title" v-bind:image="categorie.image" v-bind:active="categorie.active" v-bind:featured="categorie.featured" v-bind:id="categorie.id" class="m-4"></card>
-    </div>
+        <card show-action v-bind:name="categorie.title" v-bind:image="categorie.image" v-bind:active="categorie.active" v-bind:featured="categorie.featured" v-bind:id="categorie.id" class="m-4"></card>
+      </div>
   </div>
   <FAB></FAB>
 </template>
@@ -21,7 +21,9 @@ export default {
   },
   components: {
     Card,
-    FAB
+    FAB,
+
+
   },
   async created() {
     try {

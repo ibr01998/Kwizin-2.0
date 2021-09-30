@@ -29,7 +29,7 @@ class CategoriesController extends Controller
 
         $request->validate([
             'title' => 'required',
-            'image_name' => 'required|file|image'
+            'image_name' => 'required|file|im age'
         ]);
 
         $categories = Categories::create($request->all());

@@ -19,11 +19,9 @@
 <div class="m-4 bg-neutral-focus rounded-box">
  <div class="card lg:card-side bordered">
     <div class="card-body">
-      <h2 class="card-title">Welcome Back</h2> 
-      <p v-if="user">{{user.name}}</p> 
+      <h2 class="card-title text-center">Welcome Back <span v-if="user">{{user.name}}</span></h2>
       <div class="avatar absolute inset-y-0 right-0 m-4">
-      <div class="mb-8 w-24 h-24 mask mask-hexagon">
-      <img src="http://daisyui.com/tailwind-css-component-profile-1@94w.png">
+      <div class="w-24 h-24 mask mask-hexagon">
       </div>
     </div> 
     </div>
@@ -36,17 +34,10 @@
       </div>
     </div>
   <div class="justify-center lg:flex md:flex">
-<<<<<<< Updated upstream
     <Card show-price class="m-2"></Card>
     <Card show-price class="m-2"></Card>
     <Card show-price class="m-2"></Card>
     <Card show-price class="m-2"></Card>
-=======
-    <Card  class="m-4"></Card>
-    <Card show-price class="m-4"></Card>
-    <Card show-price class="m-4"></Card>
-    <Card show-price class="m-4"></Card>
->>>>>>> Stashed changes
   </div>
   </div>
 
