@@ -1,5 +1,5 @@
 <template>
-  <div class="m-4 sm:justify-center wrapper page-loader">
+  <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 md:gap-2 lg:grid-cols-4 lg:gap-2 xl:grid-cols-5 xl:gap-2">
     <div v-for="categorie in categories" :key="categorie.id">
         <card show-action v-bind:name="categorie.title" v-bind:image="categorie.image" v-bind:active="categorie.active" v-bind:featured="categorie.featured" v-bind:id="categorie.id" class="m-4"></card>
       </div>
@@ -16,7 +16,7 @@ export default {
   name: "Categories",
   data(){
     return{
-      categories: []
+      categories: [],
     }
   },
   components: {
@@ -33,6 +33,11 @@ export default {
         }
       }).then(response =>{
         this.categories = response.data;
+        for (let i = 0; i < this.categories.length; i++){
+          let hey =  this.categories[i].title.replace(/['"]+/g, '');
+          this.categories[i].title = hey;
+          console.log(hey);
+        }
         console.log(this.categories)
       });
     } catch (error) {
@@ -43,12 +48,6 @@ export default {
 </script>
 
 <style>
-@media only screen and (min-width: 700px) {
-  .wrapper {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-  }
-}
+
 
 </style>

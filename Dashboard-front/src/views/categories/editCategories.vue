@@ -13,13 +13,13 @@
       <div class="form-control pb-6">
         <label class="cursor-pointer label">
           <span class="label-text">Featured</span>
-          <input type="checkbox" class="toggle toggle-accent" name="featured" v-model="categories.featured" v-on="categories.featured">
+          <input type="checkbox" class="toggle toggle-accent" name="featured" v-model="categories.featured" checked="{{categories.featured}}">
         </label>
       </div>
       <div class="form-control pb-6">
         <label class="cursor-pointer label">
           <span class="label-text">Active</span>
-          <input type="checkbox" class="toggle toggle-accent" name="active" v-model="categories.active" :value="categories.active" @change="test($event)">
+          <input type="checkbox" class="toggle toggle-accent" name="active" v-model="categories.active" checked="{{categories.active}}">
         </label>
       </div>
       <div class="form-control">
@@ -58,6 +58,8 @@ export default {
         }
       }).then(response =>{
         this.categories = response.data;
+        let hey =  this.categories.title.replace(/['"]+/g, '');
+        this.categories.title = hey;
         console.log(this.categories)
       });
     } catch (error) {
@@ -67,7 +69,7 @@ export default {
   methods: {
     async onSubmit(){
 
-      await axios.post('http://127.0.0.1:8000/api/Categories/add', formData,{
+      await axios.put('http://127.0.0.1:8000/api/Categories/'+ this.id, this.categories,{
         headers: {
           'Authorization' : 'Bearer ' + localStorage.getItem('token'),
           'Content-Type': 'multipart/form-data; boundary=---------------------------974767299852498929531610575',

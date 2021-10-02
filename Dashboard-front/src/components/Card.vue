@@ -6,7 +6,7 @@
           <img :src="image" class="rounded-lg shadow-lg h-52">
         </figure>
         <div class="max-w-md card-body">
-          <h2 class="card-title">{{name}}</h2>
+          <h2 class="card-title truncate ">{{name}}</h2>
           <button v-if="showPrice" class="btn glass rounded-full">$ 55</button>
           <div class="form-control">
             <label class="label">

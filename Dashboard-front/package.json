@@ -11,7 +11,8 @@
     "axios": "^0.21.1",
     "daisyui": "^1.14.0",
     "vue": "^3.2.6",
-    "vue-router": "^4.0.11"
+    "vue-router": "^4.0.11",
+    "vuex": "^3.6.2"
   },
   "devDependencies": {
     "@headlessui/vue": "^1.4.1",

@@ -33,7 +33,8 @@
         <div class=" m-4 text-2xl font-semibold">Most Popular Food's</div>
       </div>
     </div>
-  <div class="justify-center lg:flex md:flex">
+  <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 md:gap-2 lg:grid-cols-4 lg:gap-2 xl:grid-cols-5 xl:gap-2">
+    <Card show-price class="m-2"></Card>
     <Card show-price class="m-2"></Card>
     <Card show-price class="m-2"></Card>
     <Card show-price class="m-2"></Card>
